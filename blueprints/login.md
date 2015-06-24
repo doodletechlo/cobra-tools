@@ -7,11 +7,6 @@ The login service is used for retrieving, verifying, and creating tokens.
 ### Retrieve Token [POST]
 + Request (application/json;charset=utf-8)
 
-
-    + Header
-
-            Authorization: bearer
-
     + Body
 
         {
