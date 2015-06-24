@@ -27,7 +27,5 @@ The login service is used for retrieving, verifying, and creating tokens.
             {
                 code: 'denied',
                 description: 'Invalid credentials'
-            };
-
+            }
         }
-
