@@ -5,7 +5,7 @@ The login service is used for retrieving, verifying, and creating tokens.
 
 ## Profile Routes [/api/login]
 ### Retrieve Token [POST]
-+ Request (x-www-form-urlencoded;charset=utf-8)
++ Request (application/json;charset=utf-8)
 
     + Body
 
