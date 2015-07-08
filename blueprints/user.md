@@ -1,9 +1,9 @@
 FORMAT: 1A
 
-# Login Service
+# User Service
 The login service is used for retrieving, verifying, and creating tokens.
 
-## Profile Routes [/api/login]
+## Profile Routes [/api/user/login]
 ### Retrieve Token [POST]
 + Request (application/json;charset=utf-8)
 
