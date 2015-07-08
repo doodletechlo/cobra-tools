@@ -39,7 +39,7 @@ The login service is used for retrieving, verifying, and creating tokens.
         {
             username: "testuser",
             password: "password",
-            emain: "steve@dt.com",
+            email: "steve@dt.com",
             firstName: "Steve",
             lastName: "Leon"
         }
