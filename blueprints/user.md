@@ -29,4 +29,3 @@ The login service is used for retrieving, verifying, and creating tokens.
                 description: 'Invalid credentials'
             }
         }
-
