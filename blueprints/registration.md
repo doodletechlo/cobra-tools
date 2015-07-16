@@ -5,6 +5,7 @@ The registration service is used for creating, modifying, or deleting user accou
 
 ## Profile Routes [/api/registration/create]
 ### Retrieve Token [POST]
+
 + Request (application/json;charset=utf-8)
 
     + Body
