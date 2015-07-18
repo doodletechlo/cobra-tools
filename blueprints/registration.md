@@ -25,16 +25,16 @@ The registration service is used for creating, modifying, or deleting user accou
         }
 
 
-+ Response 401 (application/json)
++ Response 500 (application/json)
 
         {
             {
                 error: 'missingFields',
-                description: 'Missing Fields'
+                description: 'Required fields: username, password, firstName, lastName, email'
             }
         }
 
-+ Response 401 (application/json)
++ Response 500 (application/json)
 
         {
             {
@@ -43,7 +43,7 @@ The registration service is used for creating, modifying, or deleting user accou
             }
         }
 
-+ Response 401 (application/json)
++ Response 500 (application/json)
 
         {
             {
@@ -52,11 +52,20 @@ The registration service is used for creating, modifying, or deleting user accou
             }
         }
 
-+ Response 401 (application/json)
++ Response 500 (application/json)
 
         {
             {
                 error: 'dataError',
-                description: 'Database entry failed'
+                description: 'Profile creation error'
+            }
+        }
+
++ Response 500 (application/json)
+
+        {
+            {
+                error: 'dataError',
+                description: 'User creation error'
             }
         }

@@ -19,11 +19,12 @@ User profile service
             lastName: "Leon",
             firstName: "Steve",
             email: "testuser@dt.com",
+            createDate: "2015-07-18T23:49:01.035Z",
+            updateDate: "2015-07-18T23:50:08.306Z",
             customerId: "0e5da78f-733c-4602-a9af-340b6a3e83ab"
         }
 
-
-+ Response 401 (application/json)
++ Response 404 (application/json)
 
         {
             {
@@ -49,12 +50,12 @@ User profile service
 
 + Response 200 (application/json;charset=utf-8)
 
-+ Response 401 (application/json)
++ Response 400 (application/json)
 
         {
             {
-                error: 'denied',
-                description: 'Invalid credentials'
+                error: 'missingFields',
+                description: 'Required fields: oldPassword, newPassword'
             }
         }
 
@@ -62,8 +63,17 @@ User profile service
 
         {
             {
-                error: 'missingFields',
-                description: 'Required fields: newPassword, oldPassword'
+                error: 'invalidCredentials',
+                description: 'Incorrect password'
+            }
+        }
+
++ Response 500 (application/json)
+
+        {
+            {
+                error: 'error',
+                description: 'Update error'
             }
         }
 
@@ -83,20 +93,20 @@ User profile service
 
 + Response 200 (application/json;charset=utf-8)
 
-+ Response 401 (application/json)
-
-        {
-            {
-                error: 'denied',
-                description: 'Invalid credentials'
-            }
-        }
-
-+ Response 401 (application/json)
++ Response 400 (application/json)
 
         {
             {
                 error: 'missingFields',
                 description: 'Required fields: email'
+            }
+        }
+
++ Response 500 (application/json)
+
+        {
+            {
+                error: 'error',
+                description: 'Update error'
             }
         }

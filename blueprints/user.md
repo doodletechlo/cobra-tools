@@ -28,3 +28,12 @@ The login service is used for retrieving, verifying, and creating tokens.
                 description: 'Invalid credentials'
             }
         }
+
++ Response 500 (application/json)
+
+        {
+            {
+                error: 'databaseError',
+                description: 'Unable to retrieve token'
+            }
+        }
