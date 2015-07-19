@@ -1,0 +1,23 @@
+{
+  "name": "dredd-api",
+  "version": "1.0.0",
+  "description": "automated testing for cobra apis",
+  "main": "server.js",
+  "author": "Esteban Leon",
+  "private": true,
+  "scripts": {
+    "start": "DEBUG=main nodemon -e js --exec sh bin/execute.sh",
+    "local": "DEBUG=main ENV=local nodemon -e js --exec sh bin/execute.sh",
+    "test": "jasmine-node --autotest --color --verbose spec"
+  },
+  "dependencies": {
+    "async": "^0.9.0",
+    "chalk": "^1.0.0",
+    "cli-color": "^1.0.0",
+    "debug": "^2.1.3",
+    "jasmine-node": "^1.14.5",
+    "lodash": "^3.8.0",
+    "q": "^1.4.1",
+    "request": "^2.57.0"
+  }
+}
