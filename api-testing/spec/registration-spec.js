@@ -15,8 +15,8 @@ ddescribe('create', function() {
                 firstName: 'steve',
                 lastName: 'leon'
             }
-        }
-    })
+        };
+    });
 
     it('happy path', function(done) {
         http(settings, function(err, results) {
@@ -25,7 +25,7 @@ ddescribe('create', function() {
             expect(results.token).toBeDefined();
             done();
         });
-    })
+    });
 
     it('missingFields', function(done){
         settings.body = {
@@ -33,13 +33,13 @@ ddescribe('create', function() {
                password: 'password',
                email: 'testuser2@dt.com',
                firstName: 'steve'
-        }
+        };
         http(settings, function(err, results){
             expect(err).toBeDefined();
             expect(results.code).toBeDefined();
             expect(results.code).toEqual('missingFields');
             done();
-        })
+        });
     });
 
     it('email is taken', function(done){
@@ -50,7 +50,7 @@ ddescribe('create', function() {
             expect(results.code).toBeDefined();
             expect(results.code).toEqual('emailTaken');
             done();
-        })
+        });
     });
 
     it('username is taken', function(done){
@@ -61,6 +61,6 @@ ddescribe('create', function() {
             expect(results.code).toBeDefined();
             expect(results.code).toEqual('usernameTaken');
             done();
-        })
+        });
     });
-})
+});
